@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bean Theory Coffee Roasters - Premium Artisan Coffee</title>
+  <meta name="description" content="Bean Theory Coffee Roasters - Premium artisan coffee from African farms. Freshly roasted beans, brewing guides, and wholesale options.">
+  <meta name="keywords" content="artisan coffee, coffee roasters, African coffee beans, fresh roasted coffee, brewing guides, wholesale coffee">
+  <style>
+    body { font-family: Aptos, sans-serif; margin:0; background:#F5F5DC; color:#4B3621; }
+    header { background:#4B3621; padding:1em; text-align:center; }
+    nav a { color:#F5F5DC; margin:0 10px; text-decoration:none; font-weight:bold; }
+    .hero { text-align:center; padding:50px; background:#D2B48C; }
+    .hero img { width:300px; border-radius:15px; margin-bottom:20px; }
+    .gallery { display:flex; justify-content:center; gap:20px; padding:40px; flex-wrap: wrap; }
+    .gallery img { width:200px; height:150px; object-fit: cover; border-radius:12px; box-shadow:0 4px 6px rgba(0,0,0,0.3); cursor: pointer; transition: transform 0.3s; }
+    .gallery img:hover { transform: scale(1.05); }
+    footer { text-align:center; padding:20px; background:#4B3621; color:#F5F5DC; }
+    
+    /* Lightbox Styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox-content {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .lightbox-caption {
+      color: white;
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="products.html">Products</a>
+      <a href="wholesale.html">Wholesale</a>
+      <a href="enquiry.html">Enquiry</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG" alt="Fresh Cup of Bean Theory Coffee">
+    <h1>Welcome to Bean Theory Coffee Roasters</h1>
+    <p>“To roast the freshest, most traceable coffee while supporting African farmers.”</p>
+    <a href="products.html" style="color: #4B3621; font-weight: bold;">Shop Now</a> | 
+    <a href="wholesale.html" style="color: #4B3621; font-weight: bold;">Wholesale Portal</a>
+  </section>
+
+  <!-- Image Gallery with Lightbox -->
+  <section class="gallery">
+    <img src="farming.jpg" alt="Coffee Bean Farming" onclick="openLightbox('farming.jpg', 'Ethical coffee bean farming in Africa')">
+    <img src="coffee logo.jpg" alt="Coffee Roasting Process" onclick="openLightbox('coffee logo.jpg', 'Artisan coffee roasting process')">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Coffee_cup_on_table.jpg" alt="Coffee Cup on Table" onclick="openLightbox('https://upload.wikimedia.org/wikipedia/commons/4/4c/Coffee_cup_on_table.jpg', 'Perfectly brewed coffee experience')">
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Bean Theory Coffee Roasters</p>
+  </footer>
+
+  <script>
+    function openLightbox(src, caption) {
+      document.getElementById('lightbox').style.display = 'flex';
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-caption').textContent = caption;
+    }
+    
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+    
+    // Close lightbox when clicking outside the image
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeLightbox();
+      }
+    });
+    
+    // Close lightbox with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeLightbox();
+      }
+    });
+  </script>
+</body>
+</html>

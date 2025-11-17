@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>General Enquiry - Bean Theory Coffee Roasters</title>
+  <meta name="description" content="Have questions about our coffee? Send us a general enquiry and we'll help you choose the perfect brew.">
+  <meta name="keywords" content="coffee enquiry, bean questions, brewing advice, coffee consultation">
+  <style>
+    body { font-family: Aptos, sans-serif; margin:0; background:#F5F5DC; color:#4B3621; }
+    header { background:#4B3621; padding:1em; }
+    nav a { color:#F5F5DC; margin:0 10px; text-decoration:none; font-weight:bold; }
+    section { padding:20px; max-width:600px; margin:0 auto; }
+    footer { text-align:center; padding:20px; background:#4B3621; color:#F5F5DC; }
+    .form-group { margin-bottom: 15px; }
+    label { display: block; margin-bottom: 5px; font-weight: bold; }
+    input, textarea, select { width: 100%; padding: 8px; border: 1px solid #4B3621; border-radius: 4px; }
+    .error { color: red; font-size: 12px; display: none; }
+    button { background: #4B3621; color: #F5F5DC; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #3a2a19; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="products.html">Products</a>
+      <a href="wholesale.html">Wholesale</a>
+      <a href="enquiry.html">Enquiry</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>General Enquiry</h2>
+    <form id="enquiryForm">
+      <div class="form-group">
+        <label for="enquiryName">Name: *</label>
+        <input type="text" id="enquiryName" name="name">
+        <div class="error" id="nameError">Please enter your name</div>
+      </div>
+      
+      <div class="form-group">
+        <label for="enquiryEmail">Email: *</label>
+        <input type="email" id="enquiryEmail" name="email">
+        <div class="error" id="emailError">Please enter a valid email address</div>
+      </div>
+      
+      <div class="form-group">
+        <label for="enquiryType">Enquiry Type: *</label>
+        <select id="enquiryType" name="enquiryType">
+          <option value="">Select enquiry type</option>
+          <option value="product">Product Information</option>
+          <option value="brewing">Brewing Advice</option>
+          <option value="shipping">Shipping Questions</option>
+          <option value="other">Other</option>
+        </select>
+        <div class="error" id="typeError">Please select an enquiry type</div>
+      </div>
+      
+      <div class="form-group">
+        <label for="enquiryMessage">Message: *</label>
+        <textarea id="enquiryMessage" name="message" rows="5"></textarea>
+        <div class="error" id="messageError">Please enter your message</div>
+      </div>
+      
+      <button type="submit">Submit Enquiry</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Bean Theory Coffee Roasters</p>
+  </footer>
+
+  <script>
+    document.getElementById('enquiryForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      let isValid = true;
+      
+      // Name validation
+      const name = document.getElementById('enquiryName').value.trim();
+      if (name === '') {
+        document.getElementById('nameError').style.display = 'block';
+        isValid = false;
+      } else {
+        document.getElementById('nameError').style.display = 'none';
+      }
+      
+      // Email validation
+      const email = document.getElementById('enquiryEmail').value.trim();
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (email === '' || !emailPattern.test(email)) {
+        document.getElementById('emailError').style.display = 'block';
+        isValid = false;
+      } else {
+        document.getElementById('emailError').style.display = 'none';
+      }
+      
+      // Enquiry type validation
+      const enquiryType = document.getElementById('enquiryType').value;
+      if (enquiryType === '') {
+        document.getElementById('typeError').style.display = 'block';
+        isValid = false;
+      } else {
+        document.getElementById('typeError').style.display = 'none';
+      }
+      
+      // Message validation
+      const message = document.getElementById('enquiryMessage').value.trim();
+      if (message === '') {
+        document.getElementById('messageError').style.display = 'block';
+        isValid = false;
+      } else {
+        document.getElementById('messageError').style.display = 'none';
+      }
+      
+      if (isValid) {
+        alert('Thank you for your enquiry! We will respond within 24 hours.');
+        this.reset();
+      }
+    });
+  </script>
+</body>
+</html>

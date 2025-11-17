@@ -1,62 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta name="description" content="Bean Theory - Premium artisan coffee roasters in Cape Town sourcing ethically grown African coffee beans">
-<meta name="keywords" content="coffee, artisan, roasters, Cape Town, African beans, wholesale coffee, premium coffee"> 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wholesale - Bean Theory</title>
-  <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wholesale Coffee - Bean Theory Coffee Roasters</title>
-  <meta name="description" content="Partner with Bean Theory for wholesale coffee orders. Competitive bulk pricing for cafes, restaurants, and businesses.">
-  <meta name="keywords" content="wholesale coffee, bulk coffee orders, cafe suppliers, business coffee, competitive pricing">
-  </style>
-</head>
-  <style>
-    body { font-family: Aptos, sans-serif; margin:0; background:#F5F5DC; color:#4B3621; }
-    header { background:#4B3621; padding:1em; }
-    nav a { color:#F5F5DC; margin:0 10px; text-decoration:none; font-weight:bold; }
-    section { padding:20px; }
-    footer { text-align:center; padding:20px; background:#4B3621; color:#F5F5DC; }
-  </style>
+  <meta name="description" content="[page-specific description]">
+<meta name="keywords" content="[page-specific keywords]">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="products.html">Products</a>
-      <a href="wholesale.html">Wholesale</a>
-      <a href="enquiry.html">Enquiry</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <div class="container">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="wholesale.html">Wholesale</a>
+        <a href="enquiry.html">Enquiry</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <section>
-    <h2>Wholesale Orders</h2>
-    <p>Partner with us for bulk coffee orders at competitive rates.</p>
+  <section class="wholesale-hero">
+    <div class="container">
+      <h1>Wholesale Partnerships</h1>
+      <p>Premium coffee solutions for businesses, cafes, and restaurants</p>
+    </div>
+  </section>
 
-    <h3>Bulk Pricing</h3>
-    <table border="1" cellpadding="10">
-      <tr><th>Quantity</th><th>Price per Kg</th></tr>
-      <tr><td>5-10 Kg</td><td>R180</td></tr>
-      <tr><td>10-50 Kg</td><td>R160</td></tr>
-      <tr><td>50+ Kg</td><td>R140</td></tr>
-    </table>
+  <section class="container">
+    <h2>Become a Partner</h2>
+    <p>Join our network of premium coffee providers and offer your customers the finest African coffee beans.</p>
 
-    <h3>Request a Quote</h3>
-    <form>
-      <label>Business Name: <input type="text"></label><br><br>
-      <label>Email: <input type="email"></label><br><br>
-      <label>Quantity Needed: <input type="number"></label><br><br>
-      <button type="submit">Get Quote</button>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">☕</div>
+        <h3>Premium Quality</h3>
+        <p>Ethically sourced beans from African farms</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">💰</div>
+        <h3>Competitive Pricing</h3>
+        <p>Bulk discounts for business partners</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🚚</div>
+        <h3>Reliable Delivery</h3>
+        <p>Fresh beans delivered to your door</p>
+      </div>
+    </div>
+
+    <div class="pricing-section">
+      <h2>Bulk Pricing</h2>
+      <table class="pricing-table">
+        <tr><th>Quantity</th><th>Price per Kg</th><th>Savings</th></tr>
+        <tr><td>5-10 Kg</td><td>R180</td><td>-</td></tr>
+        <tr><td>10-50 Kg</td><td>R160</td><td>11%</td></tr>
+        <tr><td>50+ Kg</td><td>R140</td><td>22%</td></tr>
+      </table>
+    </div>
+
+    <h2>Request a Wholesale Quote</h2>
+    <form class="wholesale-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Business Name *</label>
+          <input type="text" required>
+        </div>
+        <div class="form-group">
+          <label>Contact Person *</label>
+          <input type="text" required>
+        </div>
+      </div>
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label>Email *</label>
+          <input type="email" required>
+        </div>
+        <div class="form-group">
+          <label>Phone *</label>
+          <input type="tel" required>
+        </div>
+      </div>
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label>Monthly Quantity (Kg) *</label>
+          <input type="number" min="5" required>
+        </div>
+        <div class="form-group">
+          <label>Business Type</label>
+          <select>
+            <option>Cafe/Restaurant</option>
+            <option>Office Supply</option>
+            <option>Retail Store</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label>Additional Requirements</label>
+        <textarea placeholder="Tell us about your specific needs..."></textarea>
+      </div>
+      
+      <button type="submit" class="btn">Get Wholesale Quote</button>
     </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 Bean Theory Coffee Roasters</p>
+    <div class="container">
+      <p>&copy; 2025 Bean Theory Coffee Roasters</p>
+    </div>
   </footer>
 </body>
 </html>
